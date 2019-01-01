@@ -8,7 +8,7 @@
 
 import {OptionalBreakPoint} from './break-point-registry';
 import {BreakPoint} from './break-point';
-import {extendObject} from '../../utils/object-extend';
+import {extendObject} from '../utils/object-extend';
 
 const ALIAS_DELIMITERS = /(\.|-|_)/g;
 function firstUpperCase(part: string) {
