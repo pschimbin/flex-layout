@@ -178,7 +178,7 @@ export declare class MockMediaQueryList implements MediaQueryList {
     destroy(): void;
     dispatchEvent(_: Event): boolean;
     removeEventListener<K extends keyof MediaQueryListEventMap>(_: K, __: (this: MediaQueryList, ev: MediaQueryListEventMap[K]) => any, ___?: boolean | EventListenerOptions): void;
-    removeListener(_: EventListenerOrEventListenerObject | null): void;
+    removeListener(_: MediaQueryListListener | null): void;
 }
 
 export declare type OptionalBreakPoint = BreakPoint | null;
@@ -241,7 +241,7 @@ export declare class ServerMediaQueryList implements MediaQueryList {
     destroy(): void;
     dispatchEvent(_: Event): boolean;
     removeEventListener<K extends keyof MediaQueryListEventMap>(_: K, __: (this: MediaQueryList, ev: MediaQueryListEventMap[K]) => any, ___?: boolean | EventListenerOptions): void;
-    removeListener(_: EventListenerOrEventListenerObject | null): void;
+    removeListener(_: MediaQueryListListener | null): void;
 }
 
 export declare function sortAscendingPriority(a: BreakPoint, b: BreakPoint): number;
