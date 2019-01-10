@@ -30,6 +30,7 @@ const patchedJasmine = jasmineCore.boot(jasmineCore);
 jasmineCore.boot = function() {
   return patchedJasmine;
 };
+(global as any)['jasmineCore'] = jasmineCore;
 // 5) Patch jasmine ENV with code which understands ProxyZone.
 import 'zone.js/dist/jasmine-patch.js';
 
@@ -43,5 +44,3 @@ import {patchTestBedToDestroyFixturesAfterEveryTest} from './patch-testbed';
 
 const testBed = TestBed.initTestEnvironment(ServerTestingModule, platformServerTesting());
 patchTestBedToDestroyFixturesAfterEveryTest(testBed);
-console.log('patched!');
-process.exit(1);

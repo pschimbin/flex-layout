@@ -37,7 +37,6 @@ jasmine_node_test(
         ":grid_test_sources",
         "//test:angular_test_init_node",
     ],
-    tags = ["manual"],
 )
 
 ng_web_test_suite(
